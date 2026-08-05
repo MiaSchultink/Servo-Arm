@@ -16,6 +16,7 @@ This process forced me to explore areas I did not go into in FRC that much. Prim
 It naturally led me to 2 attainable projects: a small servo powered arm and a small RC car.
 I chose to start with the arm and plan to build the car later on.
 I decided that I would run it using arduino and a few servos to begin with. I may but a Jetson later on to add some interesting vision based capabilities.
+I ordered some servos and an arduino R4 from a local store and collected them.
 
 # Design process
 I was inspired by a couple of simple, bare bones, designs I found online.
@@ -35,13 +36,49 @@ Then I started designing it in Fusion 360, a software I was farmiliar with from 
 
 **Sample Designs**
 
-<img width="1192" height="1104" alt="image" src="https://github.com/user-attachments/assets/c996221f-8324-4f23-b560-2727b5d39ebf" />
-<img width="1270" height="1060" alt="image" src="https://github.com/user-attachments/assets/b7c26798-a80a-40f0-847d-1b8638322628" />
-<img width="1258" height="988" alt="image" src="https://github.com/user-attachments/assets/c6bc7416-f76a-457a-b833-865edbf95ee3" />
-<img width="722" height="1218" alt="image" src="https://github.com/user-attachments/assets/2c10717a-bc11-42cd-afb3-3efbe8d74015" />
-<img width="570" height="1168" alt="image" src="https://github.com/user-attachments/assets/a569c97f-a190-4e41-9bd5-abf08a60e823" />
+<img width="596" height="552" alt="image" src="https://github.com/user-attachments/assets/c996221f-8324-4f23-b560-2727b5d39ebf" />
+<img width="635" height="530" alt="image" src="https://github.com/user-attachments/assets/b7c26798-a80a-40f0-847d-1b8638322628" />
+<img width="629" height="494" alt="image" src="https://github.com/user-attachments/assets/c6bc7416-f76a-457a-b833-865edbf95ee3" />
+<img width="361" height="609" alt="image" src="https://github.com/user-attachments/assets/2c10717a-bc11-42cd-afb3-3efbe8d74015" />
+<img width="285" height="584" alt="image" src="https://github.com/user-attachments/assets/a569c97f-a190-4e41-9bd5-abf08a60e823" />
 
 *All design files can be found in the design section of the repo*
+
+
+# Manufacturing
+Intially I was hoping to get the 3D printing done at the robotics lab in my old high school.
+Unfortunately, I didn't visit it very often and it was rarely open during my free time which would make printing difficult especially as I expected there would be some redesigns following unexpected problems which would require multiple printing sessions.
+
+Therefore, after some consideration, I decided to buy my own 3D printer.
+Afer conducting some research on small, affordable, at home printers I was on the fens between the BambuLab A1 Mini and the BambuLab A1 and evenytally went with the A1.
+
+
+A few weeks later it arrived and I began assembling it.
+
+<img width="768" height="1024" alt="38DD6340-E659-4301-9512-B60C4362C64C_1_105_c" src="https://github.com/user-attachments/assets/7ddabbce-2e0c-46bf-a4f3-bed2692b496d" />
+
+
+Printed my first Benchi on it!
+
+<img width="768" height="1024" alt="4DBE9703-CD98-49ED-BAF4-426CE5AF0174_1_105_c" src="https://github.com/user-attachments/assets/84041878-a6f9-44fa-93ff-7dbaba4e883e" />
+
+
+Then I got to printing the first parts of the arm I designed.
+I will admit they were much smaller than I imagined they would be.
+
+<img width="768" height="1024" alt="4F11367C-69A9-4DA9-83DC-9FFC51F4AC98_1_105_c" src="https://github.com/user-attachments/assets/2bffc4f1-7eac-4eac-a417-6ae208674ed7" />
+
+
+I then encoutered this concept called tolerance. I printed a few parts to figure out the ideal hole tolerance for the design.
+
+<img width="768" height="1024" alt="BFB75307-9957-414A-9733-DA5323CDD01B_1_105_c" src="https://github.com/user-attachments/assets/d42e1c4c-67db-4280-99eb-c5e526507942" />
+
+
+Finally, I managed to produce the first parts of the claw.
+
+<img width="768" height="1024" alt="1B74D84E-F05B-4FDB-B70B-7D81E4293CED_1_105_c" src="https://github.com/user-attachments/assets/3c493a4f-f3b3-496a-980b-423da00f64e9" />
+
+
 
 
 
