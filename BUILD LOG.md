@@ -27,12 +27,12 @@ I was inspired by a couple of simple, bare bones, designs I found online.
 I was looking for somehthing that would be easy to design and I could get to building and tinkering with as soon as possible.
 
 Next, I began to make rough sketches of what my design would look like.
-I had to figure out a few things. How would I mount the servos to create the joints? What would the gripping mechanism look like? What would the overall stucture look like? How big would it be? How many joints would it have? What would I use to connect the different bits and pieces?
+I had to figure out a few things. How would I mount the servos to create the joints? What would the gripping mechanism look like? What would the overall structure look like? How big would it be? How many joints would it have? What would I use to connect the different bits and pieces?
 
 <img width="1912" height="1482" alt="image" src="https://github.com/user-attachments/assets/9c32e04d-4852-4fdb-acaa-80a45663141e" />
 <img width="1980" height="1108" alt="image" src="https://github.com/user-attachments/assets/c8c760ac-1ea6-4840-9eda-915dac9e2bb7" />
 
-Then I started designing it in Fusion 360, a software I was farmiliar with from FRC.
+Then I started designing it in Fusion 360, a software I was familiar with from FRC.
 
 **Sample Designs**
 
@@ -46,11 +46,11 @@ Then I started designing it in Fusion 360, a software I was farmiliar with from 
 
 
 # Manufacturing
-Intially I was hoping to get the 3D printing done at the robotics lab in my old high school.
+Initially, I was hoping to get the 3D printing done at the robotics lab in my old high school.
 Unfortunately, I didn't visit it very often and it was rarely open during my free time which would make printing difficult especially as I expected there would be some redesigns following unexpected problems which would require multiple printing sessions.
 
 Therefore, after some consideration, I decided to buy my own 3D printer.
-Afer conducting some research on small, affordable, at home printers I was on the fens between the BambuLab A1 Mini and the BambuLab A1 and evenytally went with the A1.
+After conducting some research on small, affordable, at home printers I was on the fence between the BambuLab A1 Mini and the BambuLab A1 and eventually went with the A1.
 
 
 A few weeks later it arrived and I began assembling it.
@@ -69,7 +69,7 @@ I will admit they were much smaller than I imagined they would be.
 <img width="768" height="1024" alt="4F11367C-69A9-4DA9-83DC-9FFC51F4AC98_1_105_c" src="https://github.com/user-attachments/assets/2bffc4f1-7eac-4eac-a417-6ae208674ed7" />
 
 
-I then encoutered this concept called tolerance. I printed a few parts to figure out the ideal hole tolerance for the design.
+I then encountered this concept called tolerance. I printed a few parts to figure out the ideal hole tolerance for the design.
 
 <img width="768" height="1024" alt="BFB75307-9957-414A-9733-DA5323CDD01B_1_105_c" src="https://github.com/user-attachments/assets/d42e1c4c-67db-4280-99eb-c5e526507942" />
 
@@ -77,9 +77,3 @@ I then encoutered this concept called tolerance. I printed a few parts to figure
 Finally, I managed to produce the first parts of the claw.
 
 <img width="768" height="1024" alt="1B74D84E-F05B-4FDB-B70B-7D81E4293CED_1_105_c" src="https://github.com/user-attachments/assets/3c493a4f-f3b3-496a-980b-423da00f64e9" />
-
-
-
-
-
-
