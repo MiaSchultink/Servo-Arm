@@ -81,35 +81,35 @@ Finally, I managed to produce the first parts of the claw.
 As I printed more parts I stumbled upon a few issues that required a take 2.
 The base design did't account for the wires coming out of the servo resulting in a motor that fir only half way into the space I made for it.
 
-<img width="1148" height="1014" alt="image" src="https://github.com/user-attachments/assets/b28b5e14-e182-466d-8fc4-f1ecf738ebd8" />
+<img width="575" height="507" alt="image" src="https://github.com/user-attachments/assets/b28b5e14-e182-466d-8fc4-f1ecf738ebd8" />
 
 
 To fix the issue I redesigned the servo holder as 2 seperate parts - a gap in the base and an additional plate on top.
 
-<img width="1220" height="1196" alt="image" src="https://github.com/user-attachments/assets/da49e4ac-b870-4164-8111-b3bc10fc043c" />
+<img width="560" height="598" alt="image" src="https://github.com/user-attachments/assets/da49e4ac-b870-4164-8111-b3bc10fc043c" />
 
-<img width="1080" height="1054" alt="image" src="https://github.com/user-attachments/assets/5d0a48da-439d-4647-9ae2-200b1441ffe1" />
+<img width="540" height="527" alt="image" src="https://github.com/user-attachments/assets/5d0a48da-439d-4647-9ae2-200b1441ffe1" />
 
 
 I anticipated a similar issue with all the other servo holders on the arm so I went a heaed and redesgined that as well. The new design had the holder as 2 halfs that could be put together with screws.
 The old one
 
-<img width="992" height="898" alt="image" src="https://github.com/user-attachments/assets/e7799188-1a01-42cc-8a8b-a36bf9d3a10d" />
+<img width="496" height="449" alt="image" src="https://github.com/user-attachments/assets/e7799188-1a01-42cc-8a8b-a36bf9d3a10d" />
 
 The new one
 
-<img width="1210" height="950" alt="image" src="https://github.com/user-attachments/assets/d8e5fcb7-26fd-48f4-81c6-ac12c4496f35" />
+<img width="605" height="475" alt="image" src="https://github.com/user-attachments/assets/d8e5fcb7-26fd-48f4-81c6-ac12c4496f35" />
 
-<img width="1168" height="790" alt="image" src="https://github.com/user-attachments/assets/50925a41-b47c-4f8b-87ba-f75b213d0d66" />
+<img width="584" height="395" alt="image" src="https://github.com/user-attachments/assets/50925a41-b47c-4f8b-87ba-f75b213d0d66" />
 
-<img width="958" height="750" alt="image" src="https://github.com/user-attachments/assets/742c8368-3983-4cab-a4a3-e7b3f4022939" />
+<img width="479" height="375" alt="image" src="https://github.com/user-attachments/assets/742c8368-3983-4cab-a4a3-e7b3f4022939" />
 
 
 I redesigned the first bottom joint to accomidate the changes and printed it.
 
-<img width="1044" height="910" alt="image" src="https://github.com/user-attachments/assets/481bf827-26c6-402b-bef1-07ca6f5002a5" />
+<img width="522" height="455" alt="image" src="https://github.com/user-attachments/assets/481bf827-26c6-402b-bef1-07ca6f5002a5" />
 
-<img width="872" height="1212" alt="image" src="https://github.com/user-attachments/assets/bdafb75e-5982-4f3b-8cb6-fcd02c02445a" />
+<img width="436" height="606" alt="image" src="https://github.com/user-attachments/assets/bdafb75e-5982-4f3b-8cb6-fcd02c02445a" />
 
 
 
