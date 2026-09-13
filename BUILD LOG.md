@@ -1,7 +1,7 @@
-# Motivation
-I wanted to build something of my own because I enjoy it and my professional environment lacked robotics and building in general
+# The reason I built it
+My professional environment lacked robotics and hands-on making. I felt that this was missing from my life and wanted to bring it back in by pursuing small robotics projects at home.
 
-# Project Research
+# Project research process
 Searched the net for small projects that I could do at home with minimal tools and heavy machinery.
 Watched youtube videos, read blogs, read social media accounts.
 Most things I found were small 3D printed arduino run devices including: small arms, drones, RC cars, smart home electronics and more.
@@ -120,7 +120,7 @@ When I tried to simulate putting them together I realized that I had forgotten t
 
 <img width="524" height="730" alt="image" src="https://github.com/user-attachments/assets/2f5b5769-9572-4f1d-9c29-ea4cb26e7a20" />
 
-<img width="1210" height="1428" alt="image" src="https://github.com/user-attachments/assets/ec9d4b6d-0f51-4e59-bd89-ae02c818f296" />
+<img width="605" height="714" alt="image" src="https://github.com/user-attachments/assets/ec9d4b6d-0f51-4e59-bd89-ae02c818f296" />
 
 
 I also decided to remove the joint that allows the claw of the arm to spin. The motors I will use to operate the arm are small and weak as it is and I predict that they will have trouble bearing the load so I decided to remove unneccesary weight. This made the parts involved a lot simpler. I could just attach the base of the claw to the last joint.
@@ -133,16 +133,6 @@ The was arm starting to come together!
 <img width="589" height="807" alt="image" src="https://github.com/user-attachments/assets/ce5cc577-ebb0-49d1-9b28-a6989a230689" />
 
 <img width="497" height="763" alt="image" src="https://github.com/user-attachments/assets/b1f9ad54-8ede-476e-8ba1-03900ad6821f" />
-
-
-
-
-
-
-
-
-
-
 
 
 
