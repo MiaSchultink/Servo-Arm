@@ -45,7 +45,7 @@ Then I started designing it in Fusion 360, a software I was familiar with from F
 *All design files can be found in the design section of the repo*
 
 
-# Manufacturing
+# Building (and redesigning along the way)
 Initially, I was hoping to get the 3D printing done at the robotics lab in my old high school.
 Unfortunately, I didn't visit it very often and it was rarely open during my free time which would make printing difficult especially as I expected there would be some redesigns following unexpected problems which would require multiple printing sessions.
 
@@ -110,6 +110,33 @@ I redesigned the first bottom joint to accomidate the changes and printed it.
 <img width="522" height="455" alt="image" src="https://github.com/user-attachments/assets/481bf827-26c6-402b-bef1-07ca6f5002a5" />
 
 <img width="436" height="606" alt="image" src="https://github.com/user-attachments/assets/bdafb75e-5982-4f3b-8cb6-fcd02c02445a" />
+
+
+I adjusted some of the middle joints to the new servo holders and printed them as well.
+
+<img width="570" height="743" alt="image" src="https://github.com/user-attachments/assets/45488bda-c50a-47a7-9fda-2a666337e27d" />
+
+When I tried to simulate putting them together I realized that I had forgotten to enlarge the hole at the bottom of the bottom joint to fit the appropriate servo head. This took a long time to print and I did not want to do it again unless absolutely necessary so I decided to risk just drilling it out to the appropriate size. I had nothing to lose honesrly. After my dad found an old drill in the wearhouse I got to work. After some drilling and scraping the edges of the hole clean with nail scissors, it worked.
+
+<img width="524" height="730" alt="image" src="https://github.com/user-attachments/assets/2f5b5769-9572-4f1d-9c29-ea4cb26e7a20" />
+
+<img width="1210" height="1428" alt="image" src="https://github.com/user-attachments/assets/ec9d4b6d-0f51-4e59-bd89-ae02c818f296" />
+
+
+I also decided to remove the joint that allows the claw of the arm to spin. The motors I will use to operate the arm are small and weak as it is and I predict that they will have trouble bearing the load so I decided to remove unneccesary weight. This made the parts involved a lot simpler. I could just attach the base of the claw to the last joint.
+
+<img width="798" height="1008" alt="image" src="https://github.com/user-attachments/assets/3856b4f2-880e-4184-9c1e-a45e69b806a7" />
+
+
+The was arm starting to come together!
+
+<img width="589" height="807" alt="image" src="https://github.com/user-attachments/assets/ce5cc577-ebb0-49d1-9b28-a6989a230689" />
+
+<img width="497" height="763" alt="image" src="https://github.com/user-attachments/assets/b1f9ad54-8ede-476e-8ba1-03900ad6821f" />
+
+
+
+
 
 
 
