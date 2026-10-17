@@ -134,6 +134,40 @@ The was arm starting to come together!
 
 <img width="497" height="763" alt="image" src="https://github.com/user-attachments/assets/b1f9ad54-8ede-476e-8ba1-03900ad6821f" />
 
+One problem, I had no screws, allen keys or wrenches to put it together.
+So I ordered some online from a store in Rishon LeZion.
+This is what some of the shopping list looked like.
+
+<img width="1518" height="1082" alt="image" src="https://github.com/user-attachments/assets/ca3e6900-d75e-4a9e-9ade-4bd2e4a32b87" />
+
+I couldn't find a 5.5 wrench for the 3mm screws so I visited a few hardware stores in Herzliya. I didn't find one there but I did end up buying a few other things that came in handy. Files, project box, cutters...
+
+<img width="1024" height="768" alt="AE31EE3C-37D9-4CE3-966C-7031910290E2_1_105_c" src="https://github.com/user-attachments/assets/0454984d-1f02-42e0-9661-243dad7509d8" />
+
+When the screws arrived I got to work actually putting it all together.
+
+<img width="5712" height="4284" alt="DBD82D98-77D2-4663-A282-A237B054DB27_1_201_a" src="https://github.com/user-attachments/assets/81c31d2b-59a9-45e7-aef5-9c8d624811a5" />
+
+<img width="1024" height="768" alt="774375F0-BA89-4827-8DFB-B253E76FBC81_1_105_c" src="https://github.com/user-attachments/assets/7e011717-0e15-4de5-9ad9-98eae6898c14" />
+
+<img width="1024" height="768" alt="662EB8AA-EF15-4E16-AFA8-F800E1FBE512_1_105_c" src="https://github.com/user-attachments/assets/f617717b-c3e2-41cd-84c6-84e8ac035aaa" />
+
+<img width="768" height="1024" alt="B6E7BA14-E7FF-4E2F-A757-EB76F752C362_1_105_c" src="https://github.com/user-attachments/assets/b2898668-4ee9-43d4-ae3e-ea82b9d77efe" />
+
+<img width="768" height="1024" alt="EC40B266-CA52-4867-B92D-4562C4B3B49A_1_105_c" src="https://github.com/user-attachments/assets/70d39e13-bc28-4eea-a93d-d25f1cede2a8" />
+
+<img width="768" height="1024" alt="E494D4E1-9E5E-498D-8398-CF5EFE38BA11_1_105_c" src="https://github.com/user-attachments/assets/79631fc2-d0cf-44ab-8e12-a1b2ef17e1eb" />
+
+This is how it turned out.
+
+<img width="1536" height="2048" alt="B90166F0-E5AD-4C2B-A5A3-98A2119FB0B2_1_102_o" src="https://github.com/user-attachments/assets/3ba171b0-791a-4cc2-b1f3-5596de137b91" />
+
+# Electronics
+
+
+
+
+
 
 
 
