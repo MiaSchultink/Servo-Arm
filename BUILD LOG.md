@@ -1,4 +1,4 @@
-# The reason I built it
+# Why I built it
 My professional environment lacked robotics and hands-on making. I felt that this was missing from my life and wanted to bring it back in by pursuing small robotics projects at home.
 
 # Project research process
@@ -158,12 +158,36 @@ When the screws arrived I got to work actually putting it all together.
 
 <img width="768" height="1024" alt="E494D4E1-9E5E-498D-8398-CF5EFE38BA11_1_105_c" src="https://github.com/user-attachments/assets/79631fc2-d0cf-44ab-8e12-a1b2ef17e1eb" />
 
+Some of the tolerances were a little tight...
+
+<img width="384" height="512" alt="9C400DE0-82A8-4D97-BE1F-8F8D08747BD7_1_105_c" src="https://github.com/user-attachments/assets/a2383dcb-d3e4-4dbf-8320-cc40f4dd384f" />
+
+In some cases I didn't quite think about how a screw driver would reach the screw.
+
+<img width="1536" height="2048" alt="D0A1B4E0-D637-44A2-AA66-349C93E9F30B_1_102_o" src="https://github.com/user-attachments/assets/7560b440-7e7e-4b3f-8e13-483d42b6d47a" />
+
+
 This is how it turned out.
 
 <img width="1536" height="2048" alt="B90166F0-E5AD-4C2B-A5A3-98A2119FB0B2_1_102_o" src="https://github.com/user-attachments/assets/3ba171b0-791a-4cc2-b1f3-5596de137b91" />
 
+
 # Electronics
 
+I started with one servo. I hooked it up to the 5V pin on the arduino R4 and plugged it into my computer.
+It moved but often got stuck. After reading up on Arduino electronics I identified that this is definitely a power issue. The servo was drawing too much currnet. It became clear that if one servo drew too much current the 4 I planned to use on the arm would definitely do the same.
+Turns out I needed a breadboard and an external power supply. Apparently it had to be at least 5V 3A.
+I hadn't really wokred with Arduino electronics before so I did a little research and found [this helpful video] (https://www.youtube.com/watch?v=TkA2LJctU1c).
+I wanted to draw out the wiring. I discovered this site called Tinkercad and decided to plan the basic wiring there.
+
+https://github.com/user-attachments/assets/efcd9235-8b87-46f3-bb40-af65f36d5bae
+
+<img width="2862" height="1334" alt="image" src="https://github.com/user-attachments/assets/c060a61d-b3a7-4216-8473-5662ae90a63b" />
+
+I then proceeded to dig through my dad's cable closet to try and find such a wall outlet power supply. Sadly I did't find one.
+There was another problem. Even if I did buy a wall outlet I had no way of supplying the power to the breadboard.
+
+I also wondered how I would control the arm. Naturally, given my FRC + previous gaming experience the first thing that came to mind was a playstation controller.
 
 
 
