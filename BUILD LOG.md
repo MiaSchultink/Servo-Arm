@@ -176,8 +176,10 @@ This is how it turned out.
 
 I started with one servo. I hooked it up to the 5V pin on the arduino R4 and plugged it into my computer.
 It moved but often got stuck. After reading up on Arduino electronics I identified that this is definitely a power issue. The servo was drawing too much currnet. It became clear that if one servo drew too much current the 4 I planned to use on the arm would definitely do the same.
+
 Turns out I needed a breadboard and an external power supply. Apparently it had to be at least 5V 3A.
 I hadn't really wokred with Arduino electronics before so I did a little research and found [this helpful video] (https://www.youtube.com/watch?v=TkA2LJctU1c).
+
 I wanted to draw out the wiring. I discovered this site called Tinkercad and decided to plan the basic wiring there.
 
 https://github.com/user-attachments/assets/efcd9235-8b87-46f3-bb40-af65f36d5bae
@@ -187,7 +189,26 @@ https://github.com/user-attachments/assets/efcd9235-8b87-46f3-bb40-af65f36d5bae
 I then proceeded to dig through my dad's cable closet to try and find such a wall outlet power supply. Sadly I did't find one.
 There was another problem. Even if I did buy a wall outlet I had no way of supplying the power to the breadboard.
 
+I did some research and found out about this component. I ordered it locally.
+
+<img width="990" height="628" alt="image" src="https://github.com/user-attachments/assets/99380ae4-8b41-4b56-ac55-8e25ba6855d9" />
+
+When I initially tried to controlservos with it they were a little jittery and buzzed quite a bit. I couldn't figure out why until I happened to stumble upon a video that explained that you needed to move a little cover from one pin to the other to make the adaptor supply 5V instead of 3.3V. [Video] (https://www.youtube.com/shorts/smU1wqvF5vg)
+
+After a little more research I also found that it is actually better to feed the adaptor a power supply between 6-12V and let it convert it back down to 5V. I Dug through my dad's pile of cables again and found an 8.4V power supply.
+
+The little yellow cap here
+
+<img width="3024" height="4032" alt="218F58B5-D702-473D-B1D2-E589834A4D7E" src="https://github.com/user-attachments/assets/16337efa-a7d3-4b2c-8515-08b286697181" />
+
+The setup ended up looking something like this. The Arduino was connected to my laptop and the breadboard was connected to a wall outlet through the adaptor.
+
+<img width="384" height="512" alt="F7A3FE65-3F26-457C-9B66-8D0666B4167D_1_105_c" src="https://github.com/user-attachments/assets/22570b47-6c79-48aa-93bd-18c9172d78f3" />
+
 I also wondered how I would control the arm. Naturally, given my FRC + previous gaming experience the first thing that came to mind was a playstation controller.
+
+I consulted claude on how I would connect a playstation controller to my setup. It suggested either using an ESP 32 for proper bluetooth or a USB host shield to connect the controller to the Arduino. I ended up buying a host shield but sadly it arrived without the pins and I didn't have much soldering equipment.
+
 
 
 
