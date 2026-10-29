@@ -172,6 +172,7 @@ This is how it turned out.
 <img width="1536" height="2048" alt="B90166F0-E5AD-4C2B-A5A3-98A2119FB0B2_1_102_o" src="https://github.com/user-attachments/assets/3ba171b0-791a-4cc2-b1f3-5596de137b91" />
 
 
+
 # Electronics
 
 I started with one servo. I hooked it up to the 5V pin on the arduino R4 and plugged it into my computer.
@@ -192,9 +193,30 @@ There was another problem. Even if I did buy a wall outlet I had no way of suppl
 
 I did some research and found out about this component. I ordered it locally.
 
+I had claude write some simple sweeping code for testing.
+
+```
+#include <Servo.h>
+
+Servo servo1;
+
+void setup(){
+  servo1.attach(9);
+}
+
+void loop(){
+  servo1.write(0);
+  delay(1000);
+  servo1.write(90);
+  delay(1000);
+  servo1.write(180);
+  delay(1000);
+}
+```
+
 <img width="990" height="628" alt="image" src="https://github.com/user-attachments/assets/99380ae4-8b41-4b56-ac55-8e25ba6855d9" />
 
-When I initially tried to controlservos with it they were a little jittery and buzzed quite a bit. I couldn't figure out why until I happened to stumble upon a video that explained that you needed to move a little cover from one pin to the other to make the adaptor supply 5V instead of 3.3V. [Video] (https://www.youtube.com/shorts/smU1wqvF5vg)
+When I initially tried to control the servos with it they were a little jittery and buzzed quite a bit. I couldn't figure out why until I happened to stumble upon a video that explained that you needed to move a little cover from one pin to the other to make the adaptor supply 5V instead of 3.3V. [Video] (https://www.youtube.com/shorts/smU1wqvF5vg)
 
 After a little more research I also found that it is actually better to feed the adaptor a power supply between 6-12V and let it convert it back down to 5V. I Dug through my dad's pile of cables again and found an 8.4V power supply.
 
@@ -215,14 +237,35 @@ I also wondered how I would control the arm. Naturally, given my FRC + previous 
 
 I consulted claude on how I would connect a playstation controller to my setup. It suggested either using an ESP 32 for proper bluetooth or a USB host shield to connect the controller to the Arduino. I ended up buying a host shield but sadly it arrived without the pins and I didn't have much soldering equipment.
 
+Luckily, when I asked claude what I could do it suggested using my laptop as a sort of USB host shield by connecting both the Arduino and the contorller to it.
+
+Claude suggested using a standard Aruino sketch for controlling the motors and a python script to translate the playstation controller inputs to the Arduino outputs.
+
+Tried controlling one servo with the controller
+
+<img width="1080" height="1920" alt="01B2E920-182D-4F92-89C7-A8A737F9BC8B_1_102_o" src="https://github.com/user-attachments/assets/9b21ac66-ee64-44dc-adb3-7c002d2e4527" />
+
+I then moved onto to trying it on the actual arm motors.
+
+When I first started trying to program them the motors were very jittery, made a buzzing sound and didn't have a very wide range of motion for some reason.
+
+https://github.com/user-attachments/assets/28be4e67-19fe-4f4d-8247-45cd9a18284f
+
+After manually taking the motors to certain positions in the Arduino serial monitor for a while, I realized that I had just set all the motors' power on positions to 0 in the code without realy considering what position the assembly process may have started them at. This was an especially important realization in the claw because the power on position had it trying to overextend and could have ruined the servo.
+
+With that in mind, I started manually creating software limits for each motor and removing it, sending it to a certain position and putting it back as needed.
+
+<img width="3024" height="4032" alt="5B408054-142C-41F6-B34E-B888DFE890C8" src="https://github.com/user-attachments/assets/312c2cbb-0da9-4cc0-93c5-137a1b4bc429" />
+
+<img width="1160" height="898" alt="image" src="https://github.com/user-attachments/assets/d4a404ca-722a-4f8c-9963-cf5f28a0af8b" />
 
 
+It worked a lot better after that. I got the full arm moving to some level within a few hours.
 
+https://github.com/user-attachments/assets/d2cc852d-00db-4b94-8784-26cba4458f11
 
+After that, the adjustments were relatively small. Switched the buttons on the playstation controller, made the speed of the motors a bit lower so the motion would be a bit smoother.
 
+I managed to get it to pick up a box!
 
-
-
-
-
-
+<img width="1080" height="1920" alt="AA0A8696-2EED-459A-B9B6-3D06F4E0EBAB_1_102_o" src="https://github.com/user-attachments/assets/10b5ded0-4399-4022-b4b7-2daa3722ff51" />
