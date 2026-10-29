@@ -182,7 +182,8 @@ I hadn't really wokred with Arduino electronics before so I did a little researc
 
 I wanted to draw out the wiring. I discovered this site called Tinkercad and decided to plan the basic wiring there.
 
-https://github.com/user-attachments/assets/efcd9235-8b87-46f3-bb40-af65f36d5bae
+https://github.com/user<img width="1080" height="1920" alt="532EA392-8BC7-4AEC-9766-2FD8D4E85CAC_1_102_o" src="https://github.com/user-attachments/assets/6b9f3787-896e-477f-8772-3ff37c0272ab" />
+-attachments/assets/efcd9235-8b87-46f3-bb40-af65f36d5bae
 
 <img width="2862" height="1334" alt="image" src="https://github.com/user-attachments/assets/c060a61d-b3a7-4216-8473-5662ae90a63b" />
 
@@ -205,9 +206,15 @@ The setup ended up looking something like this. The Arduino was connected to my 
 
 <img width="384" height="512" alt="F7A3FE65-3F26-457C-9B66-8D0666B4167D_1_105_c" src="https://github.com/user-attachments/assets/22570b47-6c79-48aa-93bd-18c9172d78f3" />
 
+I started by controlling one servo with the setup.
+
+https://github.com/user-attachments/assets/3f21eb10-715f-4965-9a04-bfb45c7e197d
+
+
 I also wondered how I would control the arm. Naturally, given my FRC + previous gaming experience the first thing that came to mind was a playstation controller.
 
 I consulted claude on how I would connect a playstation controller to my setup. It suggested either using an ESP 32 for proper bluetooth or a USB host shield to connect the controller to the Arduino. I ended up buying a host shield but sadly it arrived without the pins and I didn't have much soldering equipment.
+
 
 
 
