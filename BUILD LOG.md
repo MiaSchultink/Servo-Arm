@@ -127,6 +127,10 @@ I also decided to remove the joint that allows the claw of the arm to spin. The 
 
 <img width="798" height="1008" alt="image" src="https://github.com/user-attachments/assets/3856b4f2-880e-4184-9c1e-a45e69b806a7" />
 
+This is what the CAD looked like after all the changes
+
+<img width="598" height="994" alt="image" src="https://github.com/user-attachments/assets/9d49bbff-c90b-49cb-8a4f-c8a4cc47189c" />
+
 
 The was arm starting to come together!
 
