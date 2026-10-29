@@ -173,7 +173,7 @@ This is how it turned out.
 
 
 
-# Electronics
+# Electronics and Programming
 
 I started with one servo. I hooked it up to the 5V pin on the arduino R4 and plugged it into my computer.
 It moved but often got stuck. After reading up on Arduino electronics I identified that this is definitely a power issue. The servo was drawing too much currnet. It became clear that if one servo drew too much current the 4 I planned to use on the arm would definitely do the same.
