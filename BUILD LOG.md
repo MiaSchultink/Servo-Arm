@@ -269,3 +269,260 @@ After that, the adjustments were relatively small. Switched the buttons on the p
 I managed to get it to pick up a box!
 
 <img width="1080" height="1920" alt="AA0A8696-2EED-459A-B9B6-3D06F4E0EBAB_1_102_o" src="https://github.com/user-attachments/assets/10b5ded0-4399-4022-b4b7-2daa3722ff51" />
+
+
+This is what the code ended up looking like
+
+Python script
+
+```
+#!/usr/bin/env python3
+"""
+ps5_servo_multi.py - read a PS5 controller on the Mac and drive four servos
+on the Arduino running servo_ps5_multi.ino.
+
+  Servo 1: left stick left/right
+  Servo 2: right stick left/right
+  Servo 3: L1 (held = one end, released = the other)
+  Servo 4: L2 (how far you pull it sets the angle)
+
+Press any button while it runs to see that button's number printed.
+Quit the Arduino IDE first: only one program can use the port.
+Press Ctrl+C to stop.
+"""
+
+import os
+import sys
+import time
+
+# Let the controller be read from a terminal script with no window
+os.environ["SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS"] = "1"
+os.environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "1"
+
+import pygame
+import serial
+import serial.tools.list_ports
+from enum import Enum
+
+# ============================ SETTINGS (edit these) ============================
+SERIAL_PORT = None     # None = find the Arduino automatically,
+                       # or set it yourself, e.g. "/dev/cu.usbmodem1101"
+BAUD_RATE   = 115200   # must match BAUD_RATE in servo_ps5_multi.ino
+SEND_HZ     = 50       # how many times per second the servos are updated
+DEADZONE    = 0.05     # sticks only: ignore tiny movement around the centre (0 to 1)
+
+# One row per servo. "servo" is the number used in servo_ps5_multi.ino (1-4).
+#   kind "stick"   - stick position sets the angle; centre = middle of the range
+#   kind "trigger" - how far you pull sets the angle; released = min, full = max
+#   kind "button"  - held = max, released = min
+# "input" is pygame's axis number (stick, trigger) or button number (button)
+# for a PS5 controller on a Mac. Set invert to True to flip the direction.
+
+
+CONTROLS = [
+    # servo  kind       input  min  max  invert      control
+    (4,      "trigger", 5,     0,   180, False),   # L1 - BASE
+    (3,      "stick",   3,     0,   180, True),   # right stick left/right - SHOULDER
+    (2,      "stick",   1,     0,   180, False),   # left stick up/down - ELBOW
+    (1,      "trigger", 4,     0,   180, True),   # L2 - CLAW
+]
+# ===============================================================================
+
+
+def find_arduino_port():
+    """Return the first serial port that looks like an Arduino, or None."""
+    for p in serial.tools.list_ports.comports():
+        if "usbmodem" in p.device or "Arduino" in (p.description or ""):
+            return p.device
+    return None
+
+
+def check_controls(pad):
+    """Stop with a clear message if CONTROLS names an input the controller lacks."""
+    for servo, kind, index, *_ in CONTROLS:
+        if kind == "button":
+            available = pad.get_numbuttons()
+        elif kind in ("stick", "trigger"):
+            available = pad.get_numaxes()
+        else:
+            sys.exit(f"Servo {servo}: unknown kind '{kind}'. Use stick, trigger or button.")
+        if not 0 <= index < available:
+            sys.exit(f"Servo {servo}: {kind} input {index} doesn't exist on this "
+                     f"controller (it has {available}). Change it in CONTROLS.")
+
+
+def read_position(pad, kind, index):
+    """Return where a control is, from 0.0 to 1.0."""
+    if kind == "button":
+        return 1.0 if pad.get_button(index) else 0.0
+    value = pad.get_axis(index)                  # -1.0 to +1.0
+    if kind == "stick" and abs(value) < DEADZONE:
+        value = 0.0
+    return (value + 1) / 2
+
+
+def main():
+    port = SERIAL_PORT or find_arduino_port()
+    if not port:
+        sys.exit("Arduino not found. Plug it in, or set SERIAL_PORT at the top of this file.")
+
+    pygame.init()
+    pygame.joystick.init()
+    if pygame.joystick.get_count() == 0:
+        sys.exit("No controller found. Check the PS5 controller is plugged in.")
+    pad = pygame.joystick.Joystick(0)
+    pad.init()
+    check_controls(pad)
+    print(f"Controller: {pad.get_name()}")
+
+    try:
+        arduino = serial.Serial(port, BAUD_RATE, timeout=0)
+    except serial.SerialException as e:
+        sys.exit(f"Could not open {port}: {e}\nIs the Arduino IDE still open?")
+    time.sleep(2)  # give the board a moment in case opening the port reset it
+    print(f"Arduino:    {port}")
+    print("Sticks, L1 and L2 move the servos. Ctrl+C to quit.")
+
+    last_sent = {}
+    try:
+        while True:
+            for event in pygame.event.get():          # also refreshes controller state
+                if event.type == pygame.JOYBUTTONDOWN:
+                    print(f"button {event.button} pressed")
+
+            for servo, kind, index, lo, hi, invert in CONTROLS:
+                t = read_position(pad, kind, index)
+                if invert:
+                    t = 1 - t
+                angle = round(lo + t * (hi - lo))
+                if last_sent.get(servo) != angle:     # only send when it changes
+                    arduino.write(f"{servo}:{angle}\n".encode())
+                    last_sent[servo] = angle
+
+            time.sleep(1 / SEND_HZ)
+    except KeyboardInterrupt:
+        print("\nStopped.")
+    finally:
+        arduino.close()
+        pygame.quit()
+
+
+if __name__ == "__main__":
+    main()
+```
+
+Arudino sketch
+```
+// servo_ps5_multi.ino
+// Drives four servos from commands sent over USB serial by ps5_servo_multi.py.
+//
+// Each command is one line: servo number, a colon, then the angle.
+// "3:120" moves servo 3 to 120 degrees. A bare angle such as "90" moves servo 1.
+//
+// Servos don't jump straight to a new angle: each one moves toward it at the
+// speed set in SPEED below, so motion is slower and smoother.
+//
+// Test without the Mac script: open Serial Monitor at 115200 baud,
+// set line ending to "Newline", and type e.g. 1:0, 2:180, 3:90, 4:45.
+//
+// Wiring: each servo's brown -> GND, red -> 5V, orange -> its pin in SERVO_PIN.
+// Power: four SG90s can draw more than the board can supply over USB. If the
+// board resets or the servos jitter, power the servos' red wires from a separate
+// 5V supply and connect that supply's ground to the Arduino's GND.
+
+#include <Servo.h>
+
+// ============================ SETTINGS (edit these) ============================
+// One column per servo. Servo numbers 1-4 match CONTROLS in ps5_servo_multi.py.
+//                           claw       elbow  shoulder  base
+const int SERVO_PIN[]   = {    9,      10,     11,      12  };  // orange signal wire pin
+const int MIN_ANGLE[]   = {   80,      100,      20,       0  };  // lowest angle allowed
+const int MAX_ANGLE[]   = {  150,     170,     80,     180  };  // highest angle allowed
+const int START_ANGLE[] = {  150,     100,     80,       0  };  // position on power-up
+const int SPEED[]       = {  180,     180,    180,     180  };  // degrees per second:
+                          // lower = slower and smoother (180 = 180 degrees in 1 second),
+                          // 0 = no limit (jump straight to the new angle)
+
+const long BAUD_RATE    = 115200;  // must match BAUD_RATE in ps5_servo_multi.py
+const unsigned long UPDATE_MS = 20; // ms between small steps (20 matches the servo's own refresh)
+// ===============================================================================
+
+const int NUM_SERVOS = sizeof(SERVO_PIN) / sizeof(SERVO_PIN[0]);
+
+Servo servos[NUM_SERVOS];
+float current[NUM_SERVOS];   // where each servo is now
+int   target[NUM_SERVOS];    // where each servo is heading
+unsigned long lastUpdate = 0;
+
+char buf[12];   // holds one incoming command, e.g. "3:120"
+byte len = 0;
+
+void setup() {
+  Serial.begin(BAUD_RATE);
+  for (int i = 0; i < NUM_SERVOS; i++) {
+    current[i] = START_ANGLE[i];
+    target[i]  = START_ANGLE[i];
+    servos[i].attach(SERVO_PIN[i]);
+    servos[i].write(START_ANGLE[i]);
+  }
+  lastUpdate = millis();
+}
+
+// Apply one complete command line held in buf: set that servo's target
+void handleCommand() {
+  buf[len] = '\0';
+
+  int servoNumber = 1;           // no colon means servo 1
+  char *angleText = buf;
+  char *colon = strchr(buf, ':');
+  if (colon) {
+    *colon = '\0';
+    servoNumber = atoi(buf);
+    angleText = colon + 1;
+  }
+  if (*angleText == '\0') return;               // nothing after the colon
+
+  int i = servoNumber - 1;
+  if (i < 0 || i >= NUM_SERVOS) return;         // no such servo
+
+  int angle = atoi(angleText);
+  target[i] = constrain(angle, MIN_ANGLE[i], MAX_ANGLE[i]);
+}
+
+// Every UPDATE_MS, move each servo one small step toward its target
+void updateServos() {
+  unsigned long now = millis();
+  if (now - lastUpdate < UPDATE_MS) return;
+  float seconds = (now - lastUpdate) / 1000.0;
+  lastUpdate = now;
+
+  for (int i = 0; i < NUM_SERVOS; i++) {
+    float remaining = target[i] - current[i];
+    float maxStep = SPEED[i] * seconds;
+
+    if (SPEED[i] <= 0 || fabs(remaining) <= maxStep) {
+      current[i] = target[i];                   // close enough: arrive
+    } else if (remaining > 0) {
+      current[i] += maxStep;
+    } else {
+      current[i] -= maxStep;
+    }
+    servos[i].write((int)round(current[i]));
+  }
+}
+
+void loop() {
+  while (Serial.available()) {
+    char c = Serial.read();
+
+    if (c == '\n' || c == '\r') {
+      if (len > 0) handleCommand();
+      len = 0;
+    } else if ((isDigit(c) || c == ':') && len < sizeof(buf) - 1) {
+      buf[len++] = c;   // collect digits and the colon, ignore anything else
+    }
+  }
+
+  updateServos();
+}
+```
