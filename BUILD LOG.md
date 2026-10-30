@@ -34,7 +34,12 @@ I had to figure out a few things. How would I mount the servos to create the joi
 
 Then I started designing it in Fusion 360, a software I was familiar with from FRC.
 
-**Sample Designs**
+One of the tougher components was the claw. It required a lot of calculations to get the dimentions right, it was so small that fitting the servo right on the base was truly a challenge.
+This is what the sketch of the bottom looked like. I must have started it from scratch at least 7 times.
+
+<img width="690" height="458" alt="Screenshot 2026-10-30 at 10 28 10" src="https://github.com/user-attachments/assets/a878340f-b0f6-415f-b219-595646ef8bbb" />
+
+The gears were not easy either. Getting the size, orientation and shape took some reiterating.
 
 <img width="596" height="552" alt="image" src="https://github.com/user-attachments/assets/c996221f-8324-4f23-b560-2727b5d39ebf" />
 <img width="635" height="530" alt="image" src="https://github.com/user-attachments/assets/b7c26798-a80a-40f0-847d-1b8638322628" />
