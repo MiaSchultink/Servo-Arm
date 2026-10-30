@@ -5,7 +5,7 @@ My professional environment lacked robotics and hands-on making. I felt that thi
 Searched the net for small projects that I could do at home with minimal tools and heavy machinery.
 Watched youtube videos, read blogs, read social media accounts.
 Most things I found were small 3D printed arduino run devices including: small arms, drones, RC cars, smart home electronics and more.
-These all seemed like great ideas so I did some research on the necessary materials, costs and build processes to asses if the project could realistically be built in an ardinary bedroom with the tools I have.
+These all seemed like great ideas so I did some research on the necessary materials, costs and build processes to assess if the project could realistically be built in an ordinary bedroom with the tools I have.
 
 **Samples from the research spreadsheet**
 <img width="2758" height="712" alt="image" src="https://github.com/user-attachments/assets/1e227b98-4ddf-4b32-9767-9b655bf3b122" />
@@ -15,7 +15,7 @@ These all seemed like great ideas so I did some research on the necessary materi
 This process forced me to explore areas I did not go into in FRC that much. Primarily electronics. I soon discovered there was a whole community of hobbyists that build these kinds of things for fun.
 It naturally led me to 2 attainable projects: a small servo powered arm and a small RC car.
 I chose to start with the arm and plan to build the car later on.
-I decided that I would run it using arduino and a few servos to begin with. I may but a Jetson later on to add some interesting vision based capabilities.
+I decided that I would run it using arduino and a few servos to begin with. I may buy a Jetson later on to add some interesting vision based capabilities.
 I ordered some servos and an arduino R4 from a local store and collected them.
 
 # Design process
@@ -96,7 +96,7 @@ To fix the issue I redesigned the servo holder as 2 seperate parts - a gap in th
 <img width="540" height="527" alt="image" src="https://github.com/user-attachments/assets/5d0a48da-439d-4647-9ae2-200b1441ffe1" />
 
 
-I anticipated a similar issue with all the other servo holders on the arm so I went a heaed and redesgined that as well. The new design had the holder as 2 halfs that could be put together with screws.
+I anticipated a similar issue with all the other servo holders on the arm so I went ahead and redesgined that as well. The new design had the holder as 2 halves that could be put together with screws.
 The old one
 
 <img width="496" height="449" alt="image" src="https://github.com/user-attachments/assets/e7799188-1a01-42cc-8a8b-a36bf9d3a10d" />
@@ -110,7 +110,7 @@ The new one
 <img width="479" height="375" alt="image" src="https://github.com/user-attachments/assets/742c8368-3983-4cab-a4a3-e7b3f4022939" />
 
 
-I redesigned the first bottom joint to accomidate the changes and printed it.
+I redesigned the first bottom joint to accommodate the changes and printed it.
 
 <img width="522" height="455" alt="image" src="https://github.com/user-attachments/assets/481bf827-26c6-402b-bef1-07ca6f5002a5" />
 
@@ -121,7 +121,7 @@ I adjusted some of the middle joints to the new servo holders and printed them a
 
 <img width="570" height="743" alt="image" src="https://github.com/user-attachments/assets/45488bda-c50a-47a7-9fda-2a666337e27d" />
 
-When I tried to simulate putting them together I realized that I had forgotten to enlarge the hole at the bottom of the bottom joint to fit the appropriate servo head. This took a long time to print and I did not want to do it again unless absolutely necessary so I decided to risk just drilling it out to the appropriate size. I had nothing to lose honesrly. After my dad found an old drill in the wearhouse I got to work. After some drilling and scraping the edges of the hole clean with nail scissors, it worked.
+When I tried to simulate putting them together I realized that I had forgotten to enlarge the hole at the bottom of the bottom joint to fit the appropriate servo head. This took a long time to print and I did not want to do it again unless absolutely necessary so I decided to risk just drilling it out to the appropriate size. I had nothing to lose honestly. After my dad found an old drill in the wearhouse I got to work. After some drilling and scraping the edges of the hole clean with nail scissors, it worked.
 
 <img width="524" height="730" alt="image" src="https://github.com/user-attachments/assets/2f5b5769-9572-4f1d-9c29-ea4cb26e7a20" />
 
@@ -137,7 +137,7 @@ This is what the CAD looked like after all the changes
 <img width="598" height="994" alt="image" src="https://github.com/user-attachments/assets/9d49bbff-c90b-49cb-8a4f-c8a4cc47189c" />
 
 
-The was arm starting to come together!
+The arm was starting to come together!
 
 <img width="589" height="807" alt="image" src="https://github.com/user-attachments/assets/ce5cc577-ebb0-49d1-9b28-a6989a230689" />
 
@@ -171,7 +171,7 @@ Some of the tolerances were a little tight...
 
 <img width="384" height="512" alt="9C400DE0-82A8-4D97-BE1F-8F8D08747BD7_1_105_c" src="https://github.com/user-attachments/assets/a2383dcb-d3e4-4dbf-8320-cc40f4dd384f" />
 
-In some cases I didn't quite think about how a screw driver would reach the screw.
+In some cases I didn't quite think about how a screwdriver would reach the screw.
 
 <img width="1536" height="2048" alt="D0A1B4E0-D637-44A2-AA66-349C93E9F30B_1_102_o" src="https://github.com/user-attachments/assets/7560b440-7e7e-4b3f-8e13-483d42b6d47a" />
 
@@ -185,7 +185,7 @@ This is how it turned out.
 # Electronics and Programming
 
 I started with one servo. I hooked it up to the 5V pin on the arduino R4 and plugged it into my computer.
-It moved but often got stuck. After reading up on Arduino electronics I identified that this is definitely a power issue. The servo was drawing too much currnet. It became clear that if one servo drew too much current the 4 I planned to use on the arm would definitely do the same.
+It moved but often got stuck. After reading up on Arduino electronics I identified that this is definitely a power issue. The servo was drawing too much current. It became clear that if one servo drew too much current the 4 I planned to use on the arm would definitely do the same.
 
 Turns out I needed a breadboard and an external power supply. Apparently it had to be at least 5V 3A.
 I hadn't really wokred with Arduino electronics before so I did a little research and found [this helpful video] (https://www.youtube.com/watch?v=TkA2LJctU1c).
