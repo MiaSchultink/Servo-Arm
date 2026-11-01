@@ -277,7 +277,7 @@ After that, the adjustments were relatively small. Switched the buttons on the p
 
 I managed to get it to pick up a box!
 
-<img width="1080" height="1920" alt="AA0A8696-2EED-459A-B9B6-3D06F4E0EBAB_1_102_o" src="https://github.com/user-attachments/assets/10b5ded0-4399-4022-b4b7-2daa3722ff51" />
+https://github.com/user-attachments/assets/293ca99b-4d80-4abf-80ef-22f105b1a79a
 
 
 This is what the code ended up looking like
