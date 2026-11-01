@@ -14,7 +14,7 @@ These all seemed like great ideas so I did some research on the necessary materi
 
 This process forced me to explore areas I did not go into in FRC that much. Primarily electronics. I soon discovered there was a whole community of hobbyists that build these kinds of things for fun.
 It naturally led me to 2 attainable projects: a small servo powered arm and a small RC car.
-I chose to start with the arm and plan to build the car later on.
+I chose to start with the arm. It seemed interesting and it's more related to humanoids, which I'm interested in.
 I decided that I would run it using arduino and a few servos to begin with. I may buy a Jetson later on to add some interesting vision based capabilities.
 I ordered some servos and an arduino R4 from a local store and collected them.
 
