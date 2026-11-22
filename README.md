@@ -10,3 +10,5 @@ Design: Fusion 360 + Tinkercad
 Electronics: Arduino R4 + MB102 + SG90 Servos
 
 Software: C++ (Arduino) + Python
+
+Check out my next project: reviving my old 1.2 m Meccano robot. https://github.com/MiaSchultink/Meccano-Robot
