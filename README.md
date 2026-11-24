@@ -12,9 +12,7 @@ Electronics: Arduino R4 + MB102 + SG90 Servos
 Software: C++ (Arduino) + Python
 
 
-
-
-
+<br></br>
 Up next: reviving my old 1.2 m Meccano robot.
 
 <details>
