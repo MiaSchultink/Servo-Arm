@@ -1,8 +1,6 @@
 # Servo-Arm
 A small robotic arm I'm building for fun as a personal project.
 
-**Using**
-
 Design: Fusion 360 + Tinkercad
 
 3D Printing: Bamabu Lab A1 + Bambu Studio
