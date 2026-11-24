@@ -1,7 +1,7 @@
 <details>
   
 <summary><sub>💡 <i>Check out my next project</i></sub><summary>
-> [!NOTE]
+  
 > I'm reviving my old 1.2 meter tall Meccano robot. Documenting how it's going so far here [Github](https://github.com/MiaSchultink/Meccano-Robot)].
 
 </details>
