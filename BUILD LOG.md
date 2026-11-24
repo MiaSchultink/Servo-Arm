@@ -1,16 +1,9 @@
-<details>
-<summary><sub>💡 <i>Check out my next project</i></sub><summary>
-  
-> I'm reviving my old 1.2 meter tall Meccano robot. Documenting how it's going so far here [Github](https://github.com/MiaSchultink/Meccano-Robot)].
-
-</details>
-
 
 <details>
-<summary><sub>💡 <i>Side note: Looking for the legacy setup?</i></sub></summary>
+<summary><sub>💡 <i>Check out my next project</i></sub></summary>
 
 > [!NOTE]
-> If you are running an older version of the project, check out the **[Legacy Setup Guide →](./docs/legacy-setup.md)** for backward-compatible instructions.
+> I'm reviving my old 1.2 meter tall Meccano robot. Documenting how it's going so far here [Github](https://github.com/MiaSchultink/Meccano-Robot)].
 
 </details>
 
