@@ -7,7 +7,6 @@
 </details>
 
 
-<br></br>
 
 # Why I built it
 My professional environment lacked robotics and hands-on making. I felt that this was missing from my life and wanted to bring it back in by pursuing small robotics projects at home.
