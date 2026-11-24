@@ -1,5 +1,5 @@
 <details>
-<summary><b>Check it out!</b></summary>
+<summary><b>Check it out my next project</b></summary>
 
 > Documenting how it's going so far here [Github](https://github.com/MiaSchultink/Meccano-Robot)].
 
