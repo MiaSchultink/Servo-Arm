@@ -14,7 +14,7 @@ Software: C++ (Arduino) + Python
 ### Up next: reviving my old 1.2 meter tall Meccano robot.
 
 <details>
-<summary><b>Check it out!e</b></summary>
+<summary><b>Check it out!</b></summary>
 
 > Documenting how it's going so far here *[Full Configuration Docs](https://github.com/MiaSchultink/Meccano-Robot)**.
 
