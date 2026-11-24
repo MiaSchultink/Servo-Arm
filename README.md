@@ -11,7 +11,7 @@ Software: C++ (Arduino) + Python
 
 
 <br></br>
-### Up next: reviving my old 1.2 m Meccano robot.
+### Up next: reviving my old 1.2 meter tall Meccano robot.
 
 <details>
 <summary>Check out my next project</summary>
