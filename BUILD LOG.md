@@ -5,6 +5,16 @@
 
 </details>
 
+
+<details>
+<summary><sub>💡 <i>Side note: Looking for the legacy setup?</i></sub></summary>
+
+> [!NOTE]
+> If you are running an older version of the project, check out the **[Legacy Setup Guide →](./docs/legacy-setup.md)** for backward-compatible instructions.
+
+</details>
+
+
 <br></br>
 
 # Why I built it
