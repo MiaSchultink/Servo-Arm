@@ -16,6 +16,6 @@ Software: C++ (Arduino) + Python
 <details>
 <summary><b>Check it out!</b></summary>
 
-> Documenting how it's going so far here *[Full Configuration Docs](https://github.com/MiaSchultink/Meccano-Robot)**.
+> Documenting how it's going so far here [Github](https://github.com/MiaSchultink/Meccano-Robot)].
 
 </details>
