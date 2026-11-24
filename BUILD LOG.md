@@ -1,11 +1,12 @@
 <details>
-<summary><b>Check out my next project</b></summary>
-
+  
+<summary><sub>💡 <i>Check out my next project</i></sub><summary>
+> [!NOTE]
 > I'm reviving my old 1.2 meter tall Meccano robot. Documenting how it's going so far here [Github](https://github.com/MiaSchultink/Meccano-Robot)].
 
 </details>
 
-
+<br></br>
 
 # Why I built it
 My professional environment lacked robotics and hands-on making. I felt that this was missing from my life and wanted to bring it back in by pursuing small robotics projects at home.
