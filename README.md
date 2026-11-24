@@ -11,4 +11,13 @@ Electronics: Arduino R4 + MB102 + SG90 Servos
 
 Software: C++ (Arduino) + Python
 
-Check out my next project: reviving my old 1.2 m Meccano robot. https://github.com/MiaSchultink/Meccano-Robot
+
+
+Up next: reviving my old 1.2 m Meccano robot.
+
+<details>
+<summary>Check out my next project</summary>
+  
+https://github.com/MiaSchultink/Meccano-Robot
+
+</details>
