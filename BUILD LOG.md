@@ -1,3 +1,12 @@
+<details>
+<summary><b>Check it out!</b></summary>
+
+> Documenting how it's going so far here [Github](https://github.com/MiaSchultink/Meccano-Robot)].
+
+</details>
+
+
+
 # Why I built it
 My professional environment lacked robotics and hands-on making. I felt that this was missing from my life and wanted to bring it back in by pursuing small robotics projects at home.
 
