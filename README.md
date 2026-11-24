@@ -13,6 +13,8 @@ Software: C++ (Arduino) + Python
 
 
 
+
+
 Up next: reviving my old 1.2 m Meccano robot.
 
 <details>
